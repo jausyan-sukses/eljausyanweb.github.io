@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV El Jausyan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(50px);
+            opacity: 0.6;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-[#0d1117] text-[#c9d1d9] font-sans relative overflow-x-hidden">
+    <!-- Ornamen Blobs sebagai background -->
+    <div class="fixed inset-0 -z-10 pointer-events-none">
+        <div class="blob w-60 h-60 bg-blue-600 absolute top-10 left-[-40px] blur-2xl opacity-40"></div>
+        <div class="blob w-60 h-60 bg-orange-500 absolute bottom-24 right-[-40px] blur-2xl opacity-40"></div>
+        <div class="blob w-44 h-44 bg-pink-500 absolute top-[60%] left-[-40px] blur-3xl opacity-30"></div>
+        <div class="blob w-32 h-32 bg-green-400 absolute bottom-6 right-6 blur-2xl opacity-20"></div>
+        <div class="blob w-24 h-24 bg-purple-600 absolute top-6 right-12 blur-2xl opacity-30"></div>
+    </div>
+
+    <!-- Header Navbar -->
+    <header class="fixed top-0 w-full bg-[#161b22] shadow-md py-3 px-3 md:px-6 flex flex-row items-center justify-between z-50 border-b border-[#21262d]">
+        <h2 class="text-lg md:text-xl font-bold text-white">E l - J A U S Y A N</h2>
+        <nav class="flex space-x-3 md:space-x-6 text-sm md:text-base">
+            <a href="#home" class="text-white hover:text-orange-400 font-semibold transition-colors">Home</a>
+            <a href="#contact" class="text-white hover:text-orange-400 font-semibold transition-colors">Contact</a>
+            <a href="#contribute" class="text-white hover:text-orange-400 font-semibold transition-colors">Contribute</a>
+        </nav>
+    </header>
+
+    <!-- Spacer -->
+    <div class="h-28 md:h-32"></div>
+
+    <!-- Profil Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center p-4 md:p-10 fade-in">
+        <div class="flex flex-col items-center space-y-6 w-full">
+            <!-- Foto Profil di tengah -->
+            <img src="img/profile.jpeg" alt="Foto Profil" class="w-40 h-40 md:w-64 md:h-64 rounded-full object-cover shadow-xl border-4 border-[#21262d] hover:scale-105 transition-transform mx-auto">
+            <!-- Nama dan Jabatan di bawah foto -->
+            <div class="flex flex-col items-center space-y-2 w-full">
+                <h1 class="text-2xl md:text-5xl font-mono text-center">Mohammad Khirz El Jausyan</h1>
+                <span class="text-base md:text-xl text-blue-300 font-medium text-center mt-2 mb-4 block">JMMI Young Staff | Programmer Bayucaraka UAV Research | AI scientist | Tech-Enterpreneur</span>
+                <div class="w-full flex justify-center">
+                    <p class="text-sm md:text-base text-[#c9d1d9] text-justify mt-2 max-w-full md:max-w-4xl px-1 md:px-0">
+                        I am an undergraduate student at Institut Teknologi Sepuluh Nopember (ITS) majoring in Computer Engineering. I am passionate about robotics, artificial intelligence, and embedded systems. My experience includes developing autonomous drones, robotic arms, and AI-based research projects. I love collaborating on open-source projects and am always eager to learn new technologies and contribute to impactful innovations.
+                    </p>
+                </div>
+            </div>
+            <!-- Pengalaman/Highlight -->
+            <ul class="list-disc text-base md:text-lg pl-5 space-y-2 text-center"></ul>
+        </div>
+
+        <!-- Terminal Typing -->
+        <div class="mt-8 md:mt-12 w-full flex justify-center">
+            <div id="terminal-typing" class="font-mono text-blue-400 text-base md:text-xl bg-[#161b22] rounded p-3 md:p-4 shadow-lg w-full max-w-xl md:max-w-2xl min-h-[60px] text-center"></div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 px-2 md:px-6 fade-in">
+        <div class="max-w-full md:max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-mono text-orange-400 mb-6 md:mb-8 text-center">C:\ Education</h2>
+            <div class="space-y-6">
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl p-4 md:p-6 shadow-md flex flex-col md:flex-row items-center justify-between">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-semibold text-white">MAS Tahfidz Yanbu`ul Qur`an Kab Kudus</h3>
+                        <p class="text-xs md:text-sm text-[#c9d1d9] mt-1 italic">Mathematic and Science, 2021 - 2024</p>
+                        <p class="text-xs md:text-sm text-[#c9d1d9] mt-2">Tahfidz, Mathematics, Science, Religion Science</p>
+                    </div>
+                    <img src="img/yb.png" alt="Logo MAS Tahfidz Yanbu'ul Qur'an" class="w-12 h-12 md:w-16 md:h-16 object-contain mt-3 md:mt-0 md:ml-4">
+                </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl p-4 md:p-6 shadow-md flex flex-col md:flex-row items-center justify-between">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-semibold text-white">Institut Teknologi Sepuluh Nopember (ITS)</h3>
+                        <p class="text-xs md:text-sm text-[#c9d1d9] mt-1 italic">Computer Engineering, 2024 - Now</p>
+                        <p class="text-xs md:text-sm text-[#c9d1d9] mt-2">Focussing embedded system, robotics, and AI Development.</p>
+                    </div>
+                    <img src="img/its.png" alt="Logo ITS" class="w-12 h-12 md:w-16 md:h-16 object-contain mt-3 md:mt-0 md:ml-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Section -->
+    <section class="py-12 md:py-20 px-2 md:px-6 fade-in">
+        <div class="max-w-full md:max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-mono text-blue-400 mb-6 md:mb-8 text-center">E:\ Experience</h2>
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-10">
+                <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" class="h-6 md:h-8">
+                <img src="https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" class="h-6 md:h-8">
+                <img src="https://img.shields.io/badge/-ROS-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS" class="h-6 md:h-8">
+                <img src="https://img.shields.io/badge/-OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" class="h-6 md:h-8">
+                <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" class="h-6 md:h-8">
+                <img src="https://img.shields.io/badge/-STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" alt="STM32" class="h-6 md:h-8">
+                <img src="https://img.shields.io/badge/-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" class="h-6 md:h-8">
+            </div>
+            <div class="space-y-6">
+                <div class="bg-[#0d1117] border border-[#303d3d] rounded-xl p-6 shadow-md hover:scale-[1.01] transition-transform">
+                    <img src="img/drone.jpeg" alt="Drone Project" class="w-full h-52 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-white">1. Autonomous Drone Project using ROS 2</h3>
+                    <p class="text-sm text-[#c9d1d9] mt-2">Developing a drone system with automatic navigation using ROS 2, MAVROS, and ArduPilot. Missions include autonomous takeoff, waypoint navigation, and landing.</p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <img src="https://img.shields.io/badge/-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+                        <img src="https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++">
+                        <img src="https://img.shields.io/badge/-ROS-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS">
+                    </div>
+                </div>
+                <div class="bg-[#0d1117] border border-[#303d3d] rounded-xl p-6 shadow-md hover:scale-[1.01] transition-transform">
+                    <img src="img/header_ex.png" alt="Robot Arm" class="w-full h-52 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-white">2. Robot Arm Vision-Based Pick and Place</h3>
+                    <p class="text-sm text-[#c9d1d9] mt-2">Creating a robotic system with ultrasonic sensors to detect objects and control a 4 DOF robot arm in picking up and arranging objects automatically using ROS Noetic and STM32.</p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <img src="https://img.shields.io/badge/-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+                        <img src="https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++">
+                        <img src="https://img.shields.io/badge/-ROS-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS">
+                        <img src="https://img.shields.io/badge/-OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
+                    </div>
+                </div>
+                <div class="bg-[#0d1117] border border-[#303d3d] rounded-xl p-6 shadow-md hover:scale-[1.01] transition-transform">
+                    <img src="img/header_ex2.png" alt="AI Polusi Udara" class="w-full h-52 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-white">3. Air Polution detection Research Using CNN Algorithm</h3>
+                    <p class="text-sm text-[#c9d1d9] mt-2">Developing a machine learning model for air quality classification based on sensor data. Involves data pre-processing, model training, and performance evaluation.</p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                    </div>
+                </div>
+                    <div class="bg-[#0d1117] border border-[#303d3d] rounded-xl p-6 shadow-md hover:scale-[1.01] transition-transform">
+                    <img src="img/header_belt.png" alt="AI Polusi Udara" class="w-full h-52 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-white">3. Conveyor Belt using Object Color Tracking</h3>
+                    <p class="text-sm text-[#c9d1d9] mt-2">conveyor belt that can move right and left following a red object using Arduino and a stepper motor</p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                        <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
+                        <img src="https://img.shields.io/badge/-ROS-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS">
+                    </div>
+                </div>
+                <div class="bg-[#0d1117] border border-[#303d3d] rounded-xl p-6 shadow-md hover:scale-[1.01] transition-transform">
+                    <img src="img/header_box.png" alt="AI Polusi Udara" class="w-full h-52 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-white">3. 3D Box With Arm bot using Opencv</h3>
+                    <p class="text-sm text-[#c9d1d9] mt-2">create a 3D box equipped with 2 stepper motors to move the robot arm that moves in 3 dimensions to pick up and move items with color detection</p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                        <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
+                        <img src="https://img.shields.io/badge/-ROS-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS">
+                        <img src="https://img.shields.io/badge/-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organization Section -->
+    <section class="py-12 md:py-20 px-2 md:px-6 fade-in">
+        <div class="max-w-full md:max-w-5xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-mono text-green-400 mb-8 md:mb-12 text-center">D:\ Organization</h2>
+            <div class="relative">
+                <div class="space-y-8 md:space-y-12">
+                    <!-- Card organization, tambahkan responsive pada gambar dan padding -->
+                    <!-- ...card organization lainnya... -->
+                     <div class="relative">
+                        <!-- <div class="absolute -left-8 top-2 w-6 h-6 bg-green-400 border-4 border-[#0d1117] rounded-full shadow-lg"></div> -->
+                        <div class="bg-[#161b22] border border-[#303d3d] rounded-xl p-6 shadow-md">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">JMMI ITS BUMJ Division</h3>
+                                    <p class="text-sm text-green-300 mt-1">Young Staff</p>
+                                    <p class="text-sm text-[#c9d1d9] mt-2">2024 - Now</p>
+                                    <p class="text-sm text-[#c9d1d9] mt-2">Handling Electronic tools rental and responsible for all Mosque Businnes</p>
+                                </div>
+                                <img src="img/jmmi.png" alt="Logo JMMI" class="w-16 h-16 object-contain mt-4 md:mt-0 md:ml-6">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example Organization 2 -->
+                    <div class="relative">
+                        <!-- <div class="absolute -left-8 top-2 w-6 h-6 bg-green-400 border-4 border-[#0d1117] rounded-full shadow-lg"></div> -->
+                        <div class="bg-[#161b22] border border-[#303d3d] rounded-xl p-6 shadow-md">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Bayucaraka UAV Research Team</h3>
+                                    <p class="text-sm text-green-300 mt-1">Programmer</p>
+                                    <p class="text-sm text-[#c9d1d9] mt-2">2024 - Sekarang</p>
+                                    <p class="text-sm text-[#c9d1d9] mt-2">learn and research about flying robots or drones to represent ITS in national and international competitions</p>
+                                </div>
+                                <img src="img/bayu.png" alt="Logo Bayucaraka" class="w-16 h-16 object-contain mt-4 md:mt-0 md:ml-6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <!-- <div class="absolute -left-8 top-2 w-6 h-6 bg-green-400 border-4 border-[#0d1117] rounded-full shadow-lg"></div> -->
+                        <div class="bg-[#161b22] border border-[#303d3d] rounded-xl p-6 shadow-md">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">RDK 46 ITS</h3>
+                                    <p class="text-sm text-green-300 mt-1">Kajian Inspiratif</p>
+                                    <p class="text-sm text-[#c9d1d9] mt-2">Desember 2024 - Mei 2025</p>
+                                    <p class="text-sm text-[#c9d1d9] mt-2">designing study activities at the ITS Manarul Ilmi mosque including studies with religious figures and political academics such as Prof Mahfudz MD</p>
+                                </div>
+                                <img src="img/rdk.png" alt="Logo Bayucaraka" class="w-16 h-16 object-contain mt-4 md:mt-0 md:ml-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const typingTexts = [
+            "Welcome to my portfolio terminal.",
+            "Robotics and AI Developer.",
+            "Computer Engineering student at ITS.",
+            "Full-stack Web and Android developer",
+            "Lets collaborate on exciting projects!",
+        ];
+        const typingElement = document.getElementById('terminal-typing');
+        let textIdx = 0, charIdx = 0, isDeleting = false;
+
+        function typeText() {
+            if (!typingElement) return;
+            const currentText = typingTexts[textIdx];
+            if (!isDeleting) {
+                typingElement.innerHTML = currentText.substring(0, charIdx + 1) + '<span class="animate-pulse">|</span>';
+                charIdx++;
+                if (charIdx === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(typeText, 1200);
+                } else {
+                    setTimeout(typeText, 50);
+                }
+            } else {
+                typingElement.innerHTML = currentText + '<span class="animate-pulse">|</span>';
+                setTimeout(() => {
+                    isDeleting = false;
+                    charIdx = 0;
+                    textIdx = (textIdx + 1) % typingTexts.length;
+                    typingElement.innerHTML = '';
+                    setTimeout(typeText, 400);
+                }, 800);
+            }
+        }
+        typeText();
+
+        // Animasi fade-in saat discroll
+        function handleFadeIn() {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 80 && rect.bottom > 80) {
+                    el.classList.add('show');
+                } else {
+                    el.classList.remove('show');
+                }
+            });
+        }
+        window.addEventListener('scroll', handleFadeIn);
+        window.addEventListener('DOMContentLoaded', handleFadeIn);
+    </script>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#0d1117] py-8 border-t border-[#21262d]">
+        <div class="flex flex-col items-center space-y-2">
+            <span class="text-lg font-semibold mb-2">Contact Me</span>
+            <div class="flex flex-wrap justify-center space-x-3 md:space-x-6 mb-8 md:mb-20 text-sm md:text-base">
+                <a href="https://github.com/username" target="_blank" class="hover:text-orange-400 transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/username" target="_blank" class="hover:text-orange-400 transition-colors">LinkedIn</a>
+                <a href="https://instagram.com/username" target="_blank" class="hover:text-orange-400 transition-colors">Instagram</a>
+                <a href="https://instagram.com/username" target="_blank" class="hover:text-orange-400 transition-colors">Youtube</a>
+                <a href="https://instagram.com/username" target="_blank" class="hover:text-orange-400 transition-colors">Whatasapp</a>
+            </div>
+            <div class="text-center text-xs md:text-sm mb-4">
+                <div>Jl. Teknik Kimia, Keputih, Sukolilo, Surabaya | suksesjausyan@gmail.com</div>
+                <div>&copy; 2025 Mohammad Khirz El Jausyan. All rights reserved. All forms of attacks and exploitation activities on this website will be subject to applicable digital laws.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
