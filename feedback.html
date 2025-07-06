@@ -7,50 +7,47 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 p-4">
-  <div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
-    <h1 class="text-2xl font-bold mb-4 text-center">Send Feedback</h1>
+  <div class="max-w-xl mx-auto bg-white p-6 rounded shadow">
+    <h1 class="text-xl font-bold mb-4 text-center">Send Feedback</h1>
     <form id="feedbackForm" class="space-y-4">
-      <input type="text" id="name" name="name" placeholder="Name" class="w-full border p-2 rounded" required />
-      <input type="email" id="email" name="email" placeholder="Email" class="w-full border p-2 rounded" required />
-      <textarea id="message" name="message" placeholder="Your Message" class="w-full border p-2 rounded" required></textarea>
-      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
+      <input type="text" id="name" placeholder="Your Name" class="w-full p-2 border rounded" required />
+      <input type="email" id="email" placeholder="Your Email" class="w-full p-2 border rounded" required />
+      <textarea id="message" placeholder="Your Message" class="w-full p-2 border rounded" required></textarea>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send</button>
     </form>
-    <p id="status" class="mt-4 text-center text-sm text-green-500 hidden">Feedback sent!</p>
+    <p id="status" class="mt-4 text-center text-green-600 hidden"></p>
   </div>
 
   <script>
     const form = document.getElementById("feedbackForm");
-    const statusText = document.getElementById("status");
+    const status = document.getElementById("status");
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
       const data = {
         name: form.name.value,
         email: form.email.value,
-        message: form.message.value
+        message: form.message.value,
       };
 
       try {
-        const res = await fetch("https://cv-feedback-api.up.railway.app/feedback", {
+        const res = await fetch("https://feedback-api.up.railway.app/feedback", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
+          body: JSON.stringify(data),
         });
 
         if (res.ok) {
+          status.textContent = "Feedback sent successfully!";
+          status.classList.remove("hidden");
           form.reset();
-          statusText.textContent = "Feedback sent successfully!";
-          statusText.classList.remove("hidden");
         } else {
-          statusText.textContent = "Failed to send feedback.";
-          statusText.classList.remove("hidden");
-          statusText.classList.replace("text-green-500", "text-red-500");
+          throw new Error("Failed to send feedback");
         }
       } catch (err) {
-        statusText.textContent = "Error occurred.";
-        statusText.classList.remove("hidden");
-        statusText.classList.replace("text-green-500", "text-red-500");
+        status.textContent = "Error occurred.";
+        status.classList.remove("hidden");
+        status.classList.replace("text-green-600", "text-red-600");
       }
     });
   </script>
