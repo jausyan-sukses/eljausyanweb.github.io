@@ -31,7 +31,7 @@
       };
 
       try {
-        const res = await fetch("feedback-backend-production-5c8b.up.railway.app", {
+        const res = await fetch("https://feedback-backend-production-5c8b.up.railway.app/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
